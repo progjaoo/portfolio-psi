@@ -34,8 +34,15 @@ export default function Home() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Save to database
     messageMutation.mutate(formData, {
-      onSuccess: () => setFormData({ name: "", email: "", phone: "", message: "" })
+      onSuccess: () => {
+        // After saving to DB, redirect to WhatsApp with the message
+        const text = `Olá Carolina, me chamo ${formData.name}. %0A%0A${formData.message}%0A%0AContato: ${formData.phone} | ${formData.email}`;
+        window.open(`https://wa.me/5524992086261?text=${text}`, "_blank");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      }
     });
   };
 
