@@ -7,6 +7,10 @@ export interface IStorage {
 
 export class DatabaseStorage implements IStorage {
   async createMessage(insertMessage: InsertMessage): Promise<Message> {
+    if (!db) {
+      console.log("Database not available, skipping save:", insertMessage);
+      return { ...insertMessage, id: 0, createdAt: new Date() } as Message;
+    }
     const [message] = await db
       .insert(messages)
       .values(insertMessage)
