@@ -1,5 +1,4 @@
-import express, { type Request, Response, NextFunction } from "express";
-import { registerRoutes } from "./routes";
+/* import express, { type Request, Response, NextFunction } from "express";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 
@@ -58,7 +57,7 @@ app.use((req, res, next) => {
 
   next();
 });
-
+/* 
 (async () => {
   await registerRoutes(httpServer, app);
 
@@ -101,3 +100,4 @@ app.use((req, res, next) => {
     },
   );
 })();
+/*  */ 

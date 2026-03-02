@@ -66,7 +66,7 @@ export function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/10 text-center text-sm text-secondary-foreground/60 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>© {new Date().getFullYear()} Carolina Carvalho. Todos os direitos reservados.</p>
-          <p>Desenvolvido com excelência</p>
+          <p>Desenvolvido por João Marcos Valente - Desenvolvedor</p>
         </div>
       </div>
     </footer>

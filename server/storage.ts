@@ -1,5 +1,4 @@
-import { db } from "./db";
-import { messages, type InsertMessage, type Message } from "@shared/schema";
+/* import { messages, type InsertMessage, type Message } from "@shared/schema";
 
 export interface IStorage {
   createMessage(message: InsertMessage): Promise<Message>;
@@ -20,3 +19,4 @@ export class DatabaseStorage implements IStorage {
 }
 
 export const storage = new DatabaseStorage();
+ */

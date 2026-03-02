@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, CheckCircle2, MapPin, MessageCircle, Quote, Monitor, CalendarHeart, Phone } from "lucide-react";
-import { useCreateMessage } from "@/hooks/use-messages";
 import { useState } from "react";
 
 // Animation variants
@@ -26,25 +25,33 @@ const staggerContainer = {
 
 export default function Home() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
-  const messageMutation = useCreateMessage();
 
   const handleWhatsApp = () => {
     window.open("https://wa.me/5524992086261", "_blank");
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Save to database
-    messageMutation.mutate(formData, {
-      onSuccess: () => {
-        // After saving to DB, redirect to WhatsApp with the message
-        const text = `Olá Carolina, me chamo ${formData.name}. %0A%0A${formData.message}%0A%0AContato: ${formData.phone} | ${formData.email}`;
-        window.open(`https://wa.me/5524992086261?text=${text}`, "_blank");
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      }
-    });
-  };
+  e.preventDefault();
+
+  const text = `
+Olá Carolina, me chamo ${formData.name}.
+
+${formData.message}
+
+Contato:
+Telefone: ${formData.phone}
+E-mail: ${formData.email}
+  `;
+
+  const encodedText = encodeURIComponent(text);
+
+  window.open(
+    `https://wa.me/5524992086261?text=${encodedText}`,
+    "_blank"
+  );
+
+  setFormData({ name: "", email: "", phone: "", message: "" });
+};
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -283,7 +290,6 @@ export default function Home() {
         
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-bold uppercase tracking-wider text-sm">Gatilhos de Transformação</span>
             <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4">
               O que dizem os pacientes
             </h2>
@@ -441,14 +447,13 @@ export default function Home() {
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    className="w-full h-12 text-base font-bold rounded-xl gap-2 mt-4 hover-lift"
-                    disabled={messageMutation.isPending}
-                  >
-                    {messageMutation.isPending ? "Enviando..." : "Enviar Mensagem"}
-                    {!messageMutation.isPending && <ArrowRight className="w-5 h-5" />}
-                  </Button>
+                 <Button 
+                  type="submit" 
+                  className="w-full h-12 text-base font-bold rounded-xl gap-2 mt-4 hover-lift"
+                >
+                  Enviar Mensagem
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
                 </form>
               </CardContent>
             </Card>
