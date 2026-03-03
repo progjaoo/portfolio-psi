@@ -145,7 +145,7 @@ E-mail: ${formData.email}
               {/* professional portrait woman smiling warm */}
               <div className="aspect-square max-w-md mx-auto rounded-full overflow-hidden border-8 border-background shadow-2xl relative z-10">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
+                  src="" 
                   alt="Psicóloga Carolina Carvalho" 
                   className="w-full h-full object-cover"
                 />
