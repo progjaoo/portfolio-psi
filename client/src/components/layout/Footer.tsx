@@ -11,7 +11,7 @@ export function Footer() {
             <p className="text-secondary-foreground/80 text-sm max-w-sm">
               Psicoterapia pautada no acolhimento, ajudando você a encontrar equilíbrio emocional e autoconhecimento.
             </p>
-            <p className="text-secondary-foreground/60 text-sm font-medium">
+            <p className="text-secondary-foreground/100 text-lg font-medium">
               CRP: 05/60519
             </p>
           </div>
@@ -65,8 +65,8 @@ export function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 text-center text-sm text-secondary-foreground/60 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p>© {new Date().getFullYear()} Carolina Carvalho. Todos os direitos reservados.</p>
-          <p>Desenvolvido por João Marcos Valente - Desenvolvedor</p>
+          <p>© {new Date().getFullYear()} Carolina de Souza Carvalho. Todos os direitos reservados.</p>
+          <p>Desenvolvido por JMV Solutions</p>
         </div>
       </div>
     </footer>

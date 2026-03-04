@@ -8,8 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, CheckCircle2, MapPin, MessageCircle, Quote, Monitor, CalendarHeart, Phone } from "lucide-react";
 import { useState } from "react";
+import FAQSection from "@/components/FAQSection";
 
-// Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
@@ -155,7 +155,7 @@ E-mail: ${formData.email}
 
             <motion.div variants={fadeInUp} className="order-1 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Prazer, eu sou a Carolina Carvalho.</h2>
-              <p className="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mb-6">
+              <p className="inline-block text-lg font-medium text-primary bg-primary/15 px-3 py-1 rounded-full mb-6">
                 Psicóloga Clínica • CRP 05/60519
               </p>
               
@@ -347,7 +347,7 @@ E-mail: ${formData.email}
           </div>
         </div>
       </section>
-
+      <FAQSection />
       {/* CONTACT SECTION */}
       <section id="contato" className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 max-w-7xl">
