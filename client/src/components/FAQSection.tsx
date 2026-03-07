@@ -7,7 +7,7 @@ import {
 
 const faqs = [
   {
-    q: "O que é a psicoterapia psicológica?",
+    q: "O que é a psicoterapia?",
     a: "É um processo de cuidado emocional conduzido por um(a) psicólogo(a), com o objetivo de promover autoconhecimento, acolher emoções, desenvolver estratégias para lidar com desafios e melhorar a qualidade de vida.",
   },
   {
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: "A psicoterapia é sigilosa?",
-    a: "Sim. O sigilo é garantido pelo Código de Ética Profissional da Psicologia. Tudo o que for dito em sessão será mantido em confidencialidade, salvo em casos extremos previstos por lei (como risco à vida).",
+    a: "Sim. O sigilo é garantido pelo Código de Ética Profissional da Psicologia. Tudo o que for dito em sessão será mantido em confidencialidade.",
   },
   {
     q: "Posso fazer psicoterapia online?",

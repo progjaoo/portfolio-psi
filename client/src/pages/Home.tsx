@@ -145,7 +145,7 @@ E-mail: ${formData.email}
               {/* professional portrait woman smiling warm */}
               <div className="aspect-square max-w-md mx-auto rounded-full overflow-hidden border-8 border-background shadow-2xl relative z-10">
                 <img 
-                  src="" 
+                  src="fotocarol.jpeg" 
                   alt="Psicóloga Carolina Carvalho" 
                   className="w-full h-full object-cover"
                 />
@@ -171,12 +171,12 @@ E-mail: ${formData.email}
                 </p>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-border flex items-center gap-4">
+             {/*  <div className="mt-8 pt-8 border-t border-border flex items-center gap-4">
                 <div className="flex -space-x-4">
                    <div className="w-10 h-10 rounded-full border-2 border-white bg-accent flex items-center justify-center text-xs font-bold text-accent-foreground">+100</div>
                 </div>
                 <p className="text-sm font-medium">Vidas impactadas através<br/>da psicoterapia.</p>
-              </div>
+              </div> */}
             </motion.div>
           </motion.div>
         </div>
