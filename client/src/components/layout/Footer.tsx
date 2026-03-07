@@ -50,13 +50,13 @@ export function Footer() {
               <li>
                 <a href="mailto:contato@carolinacarvalho.com.br" className="flex items-center gap-3 hover:text-white transition-colors">
                   <Mail className="w-5 h-5" />
-                  contato@carolinacarvalho.com.br
+                  carolinasouzacarvalho@hotmail.com
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center gap-3 hover:text-white transition-colors">
+                <a href="https://instagram.com/psicarollcarvalho" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
                   <Instagram className="w-5 h-5" />
-                  @psicologa.carolinacarvalho
+                  @psicarollcarvalho
                 </a>
               </li>
             </ul>

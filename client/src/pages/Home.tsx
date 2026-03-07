@@ -221,7 +221,7 @@ E-mail: ${formData.email}
                   </p>
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-center gap-3 text-sm font-medium">
-                      <CheckCircle2 className="w-5 h-5 text-primary" /> Consultório climatizado e acessível                  
+                      <CheckCircle2 className="w-5 h-5 text-primary" /> Consultório climatizado                                 
                     </li>
                     <li className="flex items-center gap-3 text-sm font-medium">
                       <CheckCircle2 className="w-5 h-5 text-primary" /> Localização acessível em Barra Mansa
