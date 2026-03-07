@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, CheckCircle2, MapPin, MessageCircle, Quote, Monitor, CalendarHeart, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, MessageCircle, Quote, Monitor, CalendarHeart, Phone,  DownloadCloudIcon } from "lucide-react";
 import { useState } from "react";
 import FAQSection from "@/components/FAQSection";
 
@@ -29,7 +29,10 @@ export default function Home() {
   const handleWhatsApp = () => {
     window.open("https://wa.me/5524992086261", "_blank");
   };
-
+  const handleDownloadPortfolio = () => {
+    const url = "COLE_AQUI_O_LINK_DO_DRIVE";
+    window.open(url, "_blank");
+  };
   const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault();
 
@@ -96,6 +99,7 @@ E-mail: ${formData.email}
                 <Button size="lg" variant="outline" className="rounded-full hover-lift text-base h-14 px-8 border-2" onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}>
                   Como funciona?
                 </Button>
+                
               </motion.div>
             </motion.div>
 
@@ -170,13 +174,11 @@ E-mail: ${formData.email}
                   Seja lidando com ansiedade, questões de relacionamento ou a busca por autoconhecimento, o processo psicoterapêutico é um investimento em sua qualidade de vida.
                 </p>
               </div>
-
-             {/*  <div className="mt-8 pt-8 border-t border-border flex items-center gap-4">
-                <div className="flex -space-x-4">
-                   <div className="w-10 h-10 rounded-full border-2 border-white bg-accent flex items-center justify-center text-xs font-bold text-accent-foreground">+100</div>
-                </div>
-                <p className="text-sm font-medium">Vidas impactadas através<br/>da psicoterapia.</p>
-              </div> */}
+                <Button size="lg" variant="outline" className="rounded-full hover-lift text-base h-14 mt-10 px-8 border-2" onClick={handleDownloadPortfolio}>
+                  <DownloadCloudIcon className="w-5 h-5" />
+                  Baixar Portfólio
+                </Button>
+             
             </motion.div>
           </motion.div>
         </div>
