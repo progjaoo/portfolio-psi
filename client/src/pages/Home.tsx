@@ -161,7 +161,7 @@ E-mail: ${formData.email}
               
               <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  Sou apaixonada por escutar histórias e auxiliar pessoas a encontrarem suas próprias respostas. Acredito que a terapia não precisa ser um processo rígido, mas sim um <strong>encontro acolhedor e empático</strong>.
+                  Sou apaixonada por escutar histórias e auxiliar pessoas a encontrarem suas próprias respostas. Acredito que a psicoterapia não precisa ser um processo rígido, mas sim um <strong>encontro acolhedor e empático</strong>.
                 </p>
                 <p>
                   Meu objetivo é proporcionar um ambiente seguro onde você possa expressar suas emoções, medos e inseguranças sem julgamentos, trabalhando juntos para construir uma rotina mais saudável e equilibrada.
@@ -301,12 +301,12 @@ E-mail: ${formData.email}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                text: "Começar a terapia com a Carolina foi um divisor de águas. Ela tem uma escuta tão atenta e humana que me senti seguro para falar de coisas que guardava há anos. Minha ansiedade diminuiu consideravelmente.",
+                text: "Começar a psicoterapia com a Carolina foi um divisor de águas. Ela tem uma escuta tão atenta e humana que me senti seguro para falar de coisas que guardava há anos. Minha ansiedade diminuiu consideravelmente.",
                 initials: "M. A.",
                 label: "Paciente Online"
               },
               {
-                text: "Eu tinha muito preconceito com terapia online, achava que seria frio. Mas a empatia dela transpassa a tela. Consegui ressignificar lutos e hoje me sinto muito mais leve e presente no meu dia a dia.",
+                text: "Eu tinha muito preconceito com psicoterapia online, achava que seria frio. Mas a empatia dela transpassa a tela. Consegui ressignificar lutos e hoje me sinto muito mais leve e presente no meu dia a dia.",
                 initials: "J. S.",
                 label: "Paciente Online"
               },

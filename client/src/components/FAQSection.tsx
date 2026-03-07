@@ -7,15 +7,15 @@ import {
 
 const faqs = [
   {
-    q: "O que é a terapia psicológica?",
+    q: "O que é a psicoterapia psicológica?",
     a: "É um processo de cuidado emocional conduzido por um(a) psicólogo(a), com o objetivo de promover autoconhecimento, acolher emoções, desenvolver estratégias para lidar com desafios e melhorar a qualidade de vida.",
   },
   {
-    q: "Como saber se eu preciso de terapia?",
-    a: "Você pode buscar terapia quando estiver enfrentando sofrimento emocional, dificuldades no trabalho ou nos relacionamentos, sobrecarga, luto, entre outros. Mas não é preciso \"estar mal\" para fazer terapia — ela também serve para desenvolvimento pessoal e prevenção.",
+    q: "Como saber se eu preciso de psicoterapia?",
+    a: "Você pode buscar psicoterapia quando estiver enfrentando sofrimento emocional, dificuldades no trabalho ou nos relacionamentos, sobrecarga, luto, entre outros. Mas não é preciso \"estar mal\" para fazer psicoterapia — ela também serve para desenvolvimento pessoal e prevenção.",
   },
   {
-    q: "Como funciona uma sessão de terapia?",
+    q: "Como funciona uma sessão de psicoterapia?",
     a: "As sessões geralmente têm duração de 50 minutos a 1 hora. O paciente fala sobre suas questões, sentimentos, pensamentos e experiências, enquanto o(a) psicólogo(a) escuta de forma ativa e propõe reflexões, intervenções ou exercícios.",
   },
   {
@@ -23,12 +23,12 @@ const faqs = [
     a: "Isso depende da demanda de cada pessoa. Algumas pessoas buscam apoio por um período mais curto, outras seguem por mais tempo. O número de sessões é ajustado conforme os objetivos e o progresso terapêutico.",
   },
   {
-    q: "A terapia é sigilosa?",
+    q: "A psicoterapia é sigilosa?",
     a: "Sim. O sigilo é garantido pelo Código de Ética Profissional da Psicologia. Tudo o que for dito em sessão será mantido em confidencialidade, salvo em casos extremos previstos por lei (como risco à vida).",
   },
   {
-    q: "Posso fazer terapia online?",
-    a: "Sim! A terapia online é regulamentada pelo Conselho Federal de Psicologia e oferece a mesma qualidade do atendimento presencial, com a vantagem da comodidade.",
+    q: "Posso fazer psicoterapia online?",
+    a: "Sim! A psicoterapia online é regulamentada pelo Conselho Federal de Psicologia e oferece a mesma qualidade do atendimento presencial, com a vantagem da comodidade.",
   },
   {
     q: "A Carolina atende presencialmente?",
