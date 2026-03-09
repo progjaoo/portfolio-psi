@@ -300,21 +300,18 @@ E-mail: ${formData.email}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-300">
             {[
               {
-                text: "Começar a psicoterapia com a Carolina foi um divisor de águas. Ela tem uma escuta tão atenta e humana que me senti seguro para falar de coisas que guardava há anos. Minha ansiedade diminuiu consideravelmente.",
-                initials: "M. A.",
+                text: "Outro dia achei o caderno que eu anotava as coisas das nossas sessões, saudade",
                 label: "Paciente Online"
               },
               {
-                text: "Eu tinha muito preconceito com psicoterapia online, achava que seria frio. Mas a empatia dela transpassa a tela. Consegui ressignificar lutos e hoje me sinto muito mais leve e presente no meu dia a dia.",
-                initials: "J. S.",
+                text: "Nossa tudo que você fez e faz por nós, pela minha filha, pelo carinho e cuidado com ela nem temos como agradecer.",
                 label: "Paciente Online"
               },
               {
-                text: "O consultório em Barra Mansa é um refúgio. O atendimento presencial faz com que eu me desconecte da rotina caótica. A Carolina me ajudou a impor limites e melhorar minha autoestima.",
-                initials: "R. C.",
+                text: "Excelente psicóloga, em pouco tempo me ajudou muito mas muito mesmo, Deus abençoe!.",
                 label: "Paciente Presencial"
               }
             ].map((testimonial, idx) => (
@@ -334,12 +331,12 @@ E-mail: ${formData.email}
                       "{testimonial.text}"
                     </p>
                     <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold font-serif">
-                        {testimonial.initials}
-                      </div>
+                      {/* <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold font-serif">
+                        
+                      </div> */}
                       <div>
-                        <p className="font-bold text-sm">{testimonial.initials}</p>
-                        <p className="text-xs text-muted-foreground">{testimonial.label}</p>
+                        <p className="font-bold text-sm"></p>
+                        <p className="text-xs font-bold text-muted-foreground">{testimonial.label}</p>
                       </div>
                     </div>
                   </CardContent>
