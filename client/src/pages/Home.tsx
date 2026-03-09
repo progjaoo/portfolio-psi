@@ -30,7 +30,7 @@ export default function Home() {
     window.open("https://wa.me/5524992086261", "_blank");
   };
   const handleDownloadPortfolio = () => {
-    const url = "COLE_AQUI_O_LINK_DO_DRIVE";
+    const url = "https://drive.google.com/file/d/1XnOMq69JZJ17MPDW0DbOBiAZTarCy3Cp/view?usp=sharing";
     window.open(url, "_blank");
   };
   const handleSubmit = (e: React.FormEvent) => {
