@@ -286,66 +286,8 @@ E-mail: ${formData.email}
         </div>
       </section>
 
-      {/* TESTIMONIALS SECTION */}
-      <section id="depoimentos" className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
-        
-        <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4">
-              O que dizem os pacientes
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              Relatos reais de pessoas que escolheram iniciar a jornada de autoconhecimento e cuidado emocional.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-300">
-            {[
-              {
-                text: "Outro dia achei o caderno que eu anotava as coisas das nossas sessões, saudade",
-                label: "Paciente Online"
-              },
-              {
-                text: "Nossa tudo que você fez e faz por nós, pela minha filha, pelo carinho e cuidado com ela nem temos como agradecer.",
-                label: "Paciente Online"
-              },
-              {
-                text: "Excelente psicóloga, em pouco tempo me ajudou muito mas muito mesmo, Deus abençoe!.",
-                label: "Paciente Presencial"
-              }
-            ].map((testimonial, idx) => (
-              <motion.div 
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.2, duration: 0.5 }}
-              >
-                <Card className="h-full bg-background border-border/50 shadow-md hover:shadow-xl transition-shadow relative pt-8">
-                  <div className="absolute top-6 left-6 text-primary/20">
-                    <Quote className="w-10 h-10" />
-                  </div>
-                  <CardContent className="pt-6 relative z-10 flex flex-col h-full">
-                    <p className="text-foreground/80 italic leading-relaxed mb-8 flex-grow relative z-10">
-                      "{testimonial.text}"
-                    </p>
-                    <div className="flex items-center gap-4">
-                      {/* <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold font-serif">
-                        
-                      </div> */}
-                      <div>
-                        <p className="font-bold text-sm"></p>
-                        <p className="text-xs font-bold text-muted-foreground">{testimonial.label}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
+      
       <FAQSection />
       {/* CONTACT SECTION */}
       <section id="contato" className="py-24 bg-primary text-primary-foreground">
