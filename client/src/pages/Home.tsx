@@ -6,9 +6,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, CheckCircle2, MapPin, MessageCircle, Quote, Monitor, CalendarHeart, Phone,  DownloadCloudIcon } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, MessageCircle, Monitor, CalendarHeart, Phone, DownloadCloudIcon } from "lucide-react";
 import { useState } from "react";
 import FAQSection from "@/components/FAQSection";
+
+const WHATSAPP_PHONE = "5524992086261";
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}`;
+const PORTFOLIO_DOWNLOAD_URL =
+  "https://drive.google.com/uc?export=download&id=1XnOMq69JZJ17MPDW0DbOBiAZTarCy3Cp";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -26,35 +31,24 @@ const staggerContainer = {
 export default function Home() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
 
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/5524992086261", "_blank");
+  const buildWhatsAppMessageUrl = () => {
+    const message = [
+      `Olá Carolina, me chamo ${formData.name.trim()}.`,
+      "",
+      formData.message.trim(),
+      "",
+      "Contato:",
+      `Telefone: ${formData.phone.trim()}`,
+      `E-mail: ${formData.email.trim()}`,
+    ].join("\n");
+
+    return `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
   };
-  const handleDownloadPortfolio = () => {
-    const url = "https://drive.google.com/file/d/1XnOMq69JZJ17MPDW0DbOBiAZTarCy3Cp/view?usp=sharing";
-    window.open(url, "_blank");
-  };
+
   const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
-
-  const text = `
-Olá Carolina, me chamo ${formData.name}.
-
-${formData.message}
-
-Contato:
-Telefone: ${formData.phone}
-E-mail: ${formData.email}
-  `;
-
-  const encodedText = encodeURIComponent(text);
-
-  window.open(
-    `https://wa.me/5524992086261?text=${encodedText}`,
-    "_blank"
-  );
-
-  setFormData({ name: "", email: "", phone: "", message: "" });
-};
+    e.preventDefault();
+    window.location.href = buildWhatsAppMessageUrl();
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -65,7 +59,7 @@ E-mail: ${formData.email}
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+      <section id="inicio" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         {/* Abstract background decorative blobs */}
         <div className="absolute top-0 right-0 -mr-48 -mt-48 w-96 h-96 rounded-full bg-primary/10 blur-3xl opacity-50 pointer-events-none" />
         <div className="absolute bottom-0 left-0 -ml-48 -mb-48 w-[500px] h-[500px] rounded-full bg-accent/30 blur-3xl opacity-50 pointer-events-none" />
@@ -92,9 +86,11 @@ E-mail: ${formData.email}
               </motion.p>
               
               <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" onClick={handleWhatsApp} className="rounded-full shadow-lg shadow-primary/20 hover-lift text-base h-14 px-8 gap-2">
-                  <MessageCircle className="w-5 h-5" />
-                  Agendar via WhatsApp
+                <Button asChild size="lg" className="rounded-full shadow-lg shadow-primary/20 hover-lift text-base h-14 px-8 gap-2">
+                  <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                    <MessageCircle className="w-5 h-5" />
+                    Agendar via WhatsApp
+                  </a>
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full hover-lift text-base h-14 px-8 border-2" onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}>
                   Como funciona?
@@ -149,7 +145,7 @@ E-mail: ${formData.email}
               {/* professional portrait woman smiling warm */}
               <div className="aspect-square max-w-md mx-auto rounded-full overflow-hidden border-8 border-background shadow-2xl relative z-10">
                 <img 
-                  src="fotocarol.jpeg" 
+                  src="/fotocarol.jpeg"
                   alt="Psicóloga Carolina Carvalho" 
                   className="w-full h-full object-cover"
                 />
@@ -174,9 +170,11 @@ E-mail: ${formData.email}
                   Seja lidando com ansiedade, questões de relacionamento ou a busca por autoconhecimento, o processo psicoterapêutico é um investimento em sua qualidade de vida.
                 </p>
               </div>
-                <Button size="lg" variant="outline" className="rounded-full hover-lift text-base h-14 mt-10 px-8 border-2" onClick={handleDownloadPortfolio}>
-                  <DownloadCloudIcon className="w-5 h-5" />
-                  Baixar Portfólio
+                <Button asChild size="lg" variant="outline" className="rounded-full hover-lift text-base h-14 mt-10 px-8 border-2">
+                  <a href={PORTFOLIO_DOWNLOAD_URL} target="_blank" rel="noreferrer">
+                    <DownloadCloudIcon className="w-5 h-5" />
+                    Baixar Portfólio
+                  </a>
                 </Button>
              
             </motion.div>
@@ -392,7 +390,7 @@ E-mail: ${formData.email}
                   type="submit" 
                   className="w-full h-12 text-base font-bold rounded-xl gap-2 mt-4 hover-lift"
                 >
-                  Enviar Mensagem
+                  Enviar pelo WhatsApp
                   <ArrowRight className="w-5 h-5" />
                 </Button>
                 </form>

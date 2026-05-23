@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const WHATSAPP_URL = "https://wa.me/5524992086261";
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,13 +19,9 @@ export function Navbar() {
   const navLinks = [
     { name: "Sobre Mim", href: "#sobre" },
     { name: "Como Funciona", href: "#como-funciona" },
-    { name: "Depoimentos", href: "#depoimentos" },
+    { name: "Perguntas", href: "#faq" },
     { name: "Contato", href: "#contato" },
   ];
-
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/5524992086261", "_blank");
-  };
 
   return (
     <nav
@@ -34,7 +32,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex justify-between items-center">
           {/* Logo/Brand */}
-          <a href="#" className="flex flex-col">
+          <a href="#inicio" className="flex flex-col">
             <span className="font-serif text-xl md:text-2xl font-semibold text-foreground">
               Carolina Carvalho
             </span>
@@ -56,12 +54,11 @@ export function Navbar() {
                 </a>
               ))}
             </div>
-            <Button
-              onClick={handleWhatsApp}
-              className="rounded-full shadow-md hover-lift gap-2"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Agendar Consulta
+            <Button asChild className="rounded-full shadow-md hover-lift gap-2">
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                <MessageCircle className="w-4 h-4" />
+                Agendar Consulta
+              </a>
             </Button>
           </div>
 
@@ -91,12 +88,16 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
-            <Button
-              onClick={handleWhatsApp}
-              className="w-full rounded-xl gap-2 mt-4"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Agendar Consulta
+            <Button asChild className="w-full rounded-xl gap-2 mt-4">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <MessageCircle className="w-4 h-4" />
+                Agendar Consulta
+              </a>
             </Button>
           </div>
         )}
